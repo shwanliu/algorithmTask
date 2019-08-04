@@ -94,7 +94,3 @@ CSDN: c++ https://blog.csdn.net/tyxacm/article/details/88321206
     a)两数之和，使用字典存储下标以及对应的val，只要遍历一遍nums，得到每一次遍历的target-val是否在dic中，在直接break掉后返回
 
     b)happy number: 使用dic存储下1-9的平方，如果出现循环的情况即，得到的sum和在之前出现过（或者是1出现了，之后一直会出现也是要break的），所以维护一个set，如果在set则说明出现了无限循环，break掉后，返回n==1
-
-
-
-test
