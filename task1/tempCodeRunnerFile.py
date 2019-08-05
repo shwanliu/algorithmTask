@@ -1,1 +1,0 @@
- # dlt.delete(2)

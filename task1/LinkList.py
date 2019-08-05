@@ -315,6 +315,11 @@ class DoubleLink:
 #     print('size:', dlt.nCount)
 
 
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 #2. 实现单链表反转，效率特别低，之后在做修改。。。，leetcode上已经AC
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
