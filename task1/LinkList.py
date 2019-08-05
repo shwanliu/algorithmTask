@@ -315,3 +315,62 @@ class DoubleLink:
 #     print('size:', dlt.nCount)
 
 
+#2. 实现单链表反转，效率特别低，之后在做修改。。。，leetcode上已经AC
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        r = ListNode(0)
+        if head == None:
+            return
+        def helper(head,r):
+            p = head
+            prev = p
+            if p.next==None:
+                r.next = p
+                return r.next
+            while p.next:
+                prev = p
+                p = p.next
+            r.next = p
+            r = r.next
+            prev.next = None
+            helper(head,r)
+                
+        helper(head,r)
+        return r.next
+
+# 合并两个有序链表
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        res = ListNode(0)
+        r = res
+        if l1 is None:
+            return l1
+        elif l2 is None:
+            return l2
+        # 在l1和l2同时不为空的情况下进行比较
+        while l1 and l2:
+            if l1.val < l2.val:
+                r.next = l1
+                l1 = l1.next
+            else:
+                r.next = l2
+                l2 = l2.next   
+        r = r.next
+        if l1 is not None:
+            r.next = l1 
+        else:
+            r.next = l2
+        return res.next
+
+# 实现求链表的中间节点，有点作弊嫌疑
+class Solution:
+    def middleNode(self, head: ListNode) -> ListNode:
+        p = head
+        if head ==None:
+            return None
+        l = []
+        while p!=None:
+            l.append(p)
+            p = p.next
+        # print(l[len(l)//2])
+        return l[len(l)//2]
