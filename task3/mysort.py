@@ -47,4 +47,4 @@ def qucikSortedV1(nums):
 
 if __name__ == "__main__":
     print(mergeSorted([7,5,1,6,8,3,13]))
-    print(qs([7,5,1,6,8,3,13]))
+    print(qucikSortedV1([7,5,1,6,8,3,13]))
